@@ -20,17 +20,6 @@ $ yarn add --dev webpack webpack-cli
 `webpack`: 웹팩 코어 모듈
 `webpack-cli`: 웹팩 CLI(command line interface)를 실행하기 위한 모듈
 
-### npm 확인
-``` bash
-$ npm -v
-6.2.0
-```
-
-### yarn 확인
-``` bash
-$ yarn -v
-1.9.4
-```
 
 #### 참고
 - [webpack - Getting Started](https://webpack.js.org/guides/getting-started/)
