@@ -20,6 +20,69 @@ $ yarn add --dev webpack webpack-cli
 `webpack`: 웹팩 코어 모듈
 `webpack-cli`: 웹팩 CLI(command line interface)를 실행하기 위한 모듈
 
+`package.json`파일에서 설치를 확인합니다.
+``` json
+  "devDependencies": {
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+```
+
+`lodash`를 설치해서 모듈을 연결해보도록 하겠습니다.
+``` bash
+$ yarn add lodash
+```
+
+`src/index.js`을 작성합니다.
+``` js
+import _ from 'lodash';
+
+function component() {
+  let element = document.createElement('div');
+
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+  return element;
+}
+
+document.body.appendChild(component());
+```
+웹에서는 다음과 모듈 방식을 사용할 수 있습니다.
+- ES2015 `import`
+- CommonJS `require()`
+- AMD `define`, `require`
+- CSS `@import`
+- stylesheet `url(...)`
+- html `<img src=...>`
+
+`package.json`파일에 스크립트를 추가합니다.
+``` json
+  "scripts": {
+    "build": "webpack"
+  },
+```
+
+웹팩 실행
+``` bash
+$ yarn run build
+```
+실행 후 `dist/main.js` 파일이 생겼습니다.
+`lodash` + `src/index.js` = `dist/main.js`
+웹팩 실행에 대한 설정 파일을 만들 수 있지만 지금은 기본 설정으로 실행해 보았습니다.
+
+`dist/index.html`을 작성합니다.
+``` html
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+웹팩이 생성한 `main.js`파일을 확인해 볼 수 있습니다.
 
 #### 참고
 - [webpack - Getting Started](https://webpack.js.org/guides/getting-started/)
