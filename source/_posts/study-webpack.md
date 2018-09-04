@@ -47,7 +47,7 @@ function component() {
 
 document.body.appendChild(component());
 ```
-웹에서는 다음과 모듈 방식을 사용할 수 있습니다.
+웹에서는 다음과 같은 모듈 방식을 사용할 수 있습니다.
 - ES2015 `import`
 - CommonJS `require()`
 - AMD `define`, `require`
@@ -68,7 +68,7 @@ $ yarn run build
 ```
 실행 후 `dist/main.js` 파일이 생겼습니다.
 `lodash` + `src/index.js` = `dist/main.js`
-웹팩 실행에 대한 설정 파일을 만들 수 있지만 지금은 기본 설정으로 실행해 보았습니다.
+웹팩에 대한 설정 파일을 만들 수 있지만 지금은 기본 설정으로 실행해 보았습니다.
 
 `dist/index.html`을 작성합니다.
 ``` html
